@@ -1,0 +1,49 @@
+<div class="container">
+    <form [formGroup]="addCandidateFormGroup">
+    <div class="row">
+        <div class="my-2">
+            <span>First Name</span>
+            <input type="text" name="firstName" formControlName="firstName" class="form-control"/>
+            <span class="text-danger" *ngIf="firstName && firstName.invalid && firstName.touched">This is invalid First Name</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="my-2">
+            <span>Last Name</span>
+            <input type="text" name="lastName" formControlName="lastName" class="form-control"/>
+            <span class="text-danger" *ngIf="lastName && lastName.invalid && lastName.touched">This is invalid Last Name</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="my-2">
+            <span>Email</span>
+            <input type="text" name="emailId" formControlName="emailId" class="form-control"/>
+            <span class="text-danger" *ngIf="emailId && emailId.invalid && emailId.touched">Email is required</span>
+        </div>
+    </div>   
+    
+    <div class="row">
+        <div class="my-2">
+            <span>Mobile</span>
+            <input type="text" name="mobile" formControlName="mobile" class="form-control"/>
+            <span class="text-danger" *ngIf="mobile && mobile.invalid && mobile.touched">Email is required</span>
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="my-2">
+            <span>Resume Url</span>
+            <input type="text" name="resumeUrl" formControlName="resumeUrl" class="form-control"/>
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="my-2">
+            <input type="button" [disabled]="!addCandidateFormGroup.valid" value="Save Candidate" class="btn btn-primary" (click)="saveCandidate()"/>
+        </div>
+    </div>
+
+    </form>
+</div>

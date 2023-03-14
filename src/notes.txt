@@ -1,0 +1,27 @@
+services : -> 
+    - used to transfer data from one component to another component, when components are not related.
+    - used to connect the api and get the data from apis and then pass that to controllers.
+        -- to connect with api/microservice use HttpClient service and use its methods:
+            --- get
+            --- post
+            --- put
+            --- delete
+        !!!all above 4 methos will return observable.
+
+        HttpClient will be used for async communication in WebApi.
+        But in microservice, if you're using HttpClient, that'll be used for Synchronous comminucation.
+
+
+- Difference of promise in JS and observable in Angular:
+    1. promise can only have two output, either successful or failed, obeservable can be cancelled
+    2. promise can only take 1 value at a time, observable can give multiple values at a time
+    3. obeservable is lazy loading, whenever use it, need to use subscribe method or it'll not be working
+
+
+
+@input/output properties: -> used if the components are related, must be parent and child
+
+
+Service will be created in a seperate folder, and in that folder, run:
+ - ng g s <service-name>
+ - ng g s Candidate
