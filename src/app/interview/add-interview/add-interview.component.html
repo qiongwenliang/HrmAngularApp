@@ -1,1 +1,59 @@
-<p>add-interview works!</p>
+<div class="container">
+    <form [formGroup]="addInterviewsFormGroup">
+        <div class="row">
+            <div class="my-2">
+                <span>Recruiter Id</span>
+                <input type="text" name="recruiterId" formControlName="recruiterId" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Submission Id</span>
+                <input type="text" name="recruiterId" formControlName="recruiterId" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Interview Type Id</span>
+                <input type="text" name="recruiterId" formControlName="recruiterId" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Interview Round Id</span>
+                <input type="text" name="recruiterId" formControlName="recruiterId" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Interview Scheduled On</span>
+                <input type="date" name="recruiterId" formControlName="recruiterId" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Interviewer Id</span>
+                <input type="text" name="recruiterId" formControlName="recruiterId" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Interview Feedback Id</span>
+                <input type="text" name="recruiterId" formControlName="recruiterId" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <input type="button" value="Save Interview" class="btn btn-primary" (click)="saveInterview()"/>
+            </div>
+        </div>
+
+    </form>
+</div>

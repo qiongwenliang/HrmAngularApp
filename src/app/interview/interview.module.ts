@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InterviewRoutingModule } from './interview-routing.module';
 import { AddInterviewComponent } from './add-interview/add-interview.component';
 import { ListInterviewComponent } from './list-interview/list-interview.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ListInterviewComponent } from './list-interview/list-interview.componen
   ],
   imports: [
     CommonModule,
-    InterviewRoutingModule
+    InterviewRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class InterviewModule { }

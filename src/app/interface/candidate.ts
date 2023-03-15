@@ -5,4 +5,5 @@ export interface Candidate{
     emailId:string | null | undefined,
     mobile:string | null | undefined,
     resumeUrl:string | null | undefined
+    fileName:string | null | undefined
 }

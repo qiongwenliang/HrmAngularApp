@@ -1,1 +1,37 @@
-<p>list-interview works!</p>
+<div class="container">
+    <h4>List of Interviews</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Interview Id</th>
+                <th>Recruiter Id</th>
+                <th>Submission Id</th>
+                <th>Interview Type Id</th>
+                <th>Interview Round</th>
+                <th>Interview Scheduled Date</th>
+                <th>Interviewer Id</th>
+                <th>Interview Feedback Id</th>
+                <th colspan="2">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of interviewsCollections">
+                <th>{{i.id}}</th>
+                <th>{{i.recruiterId}}</th>
+                <th>{{i.submissionId}}</th>
+                <th>{{i.interviewTypeId}}</th>
+                <th>{{i.interviewRound}}</th>
+                <th>{{i.scheduledOn}}</th>
+                <th>{{i.interviewerId}}</th>
+                <th>{{i.interviewFeedbackId}}</th>
+                <td>
+                    <input type="button" class="btn btn-info" value="Edit"/>
+                </td>
+                <td>
+                    <input type="button" class="btn btn-warning" (click)="deleteInterviews(i.id)" value="Delete">
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

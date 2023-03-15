@@ -23,7 +23,7 @@ export class CandidateService {
 
 
   saveCandidateToService(candidate:Candidate){
-      return this.http.post("http://localhost:50667/api/candidate", candidate);
+      return this.http.post("http://localhost:57880/api/candidate", candidate);
   }
   //to get the candidate information, this automatically returns observable
 
@@ -39,11 +39,11 @@ export class CandidateService {
 
 
   getAllCandidates():Observable<Candidate[]>{
-    return this.http.get<Candidate[]>("http://localhost:50667/api/candidate"); 
+    return this.http.get<Candidate[]>("http://localhost:57880/api/candidate"); 
   }
 
   deleteCandidateById(id:any){
-    return this.http.delete("http://localhost:50667/api/candidate/"+id)
+    return this.http.delete("http://localhost:57880/api/candidate/"+id)
   }
 
 }

@@ -10,15 +10,17 @@ import { CandidateService } from 'src/app/services/candidate.service';
 export class ListCandidateComponent implements OnInit {
 
   constructor(private candidateService:CandidateService){}
+  
+  candidateCollections: Candidate[] = []
+
   ngOnInit(): void {
     this.candidateService.getAllCandidates().subscribe((data)=> {
       this.candidateCollections=data;
     })
   }
-  candidateCollections: Candidate[] = []
 
   deleteCandidate(id:number){
-    if (confirm("Are you sure to delete candidate number" + id )){
+    if (confirm("Are you sure to delete candidate number" + id + "?")){
       this.candidateService.deleteCandidateById(id).subscribe(() => {
         window.location.reload();
       });

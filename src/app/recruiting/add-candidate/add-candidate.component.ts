@@ -14,9 +14,10 @@ export class AddCandidateComponent {
     id: 0,
     firstName: '',
     lastName: '',
-    emailId: '',
-    mobile:'',
-    resumeUrl:''
+    emailId: '', 
+    mobile: '',
+    resumeUrl: '',
+    fileName: undefined
   }
   
   constructor(private fb:FormBuilder, private candidateService:CandidateService){ }
@@ -26,7 +27,8 @@ export class AddCandidateComponent {
     lastName: new FormControl("", [Validators.required]),
     emailId: new FormControl("", [Validators.required, Validators.email]),
     mobile: new FormControl(""),
-    resumeUrl: new FormControl("")
+    resumeUrl: new FormControl(""),
+    fileName: new FormControl("")
   });
 
   //used to get the controls defined in addCandidateFormGroup, can display error message, a getter method must return something.
@@ -64,6 +66,8 @@ export class AddCandidateComponent {
 
     //this.candidate=this.addCandidateFormGroup.value
 
+    //console.log(this.addCandidateFormGroup.value.resumeUrl)
+
     this.candidateService.saveCandidateToService(this.candidate).subscribe(()=>{
       //this subscribe to observable and returns a call back function
       //console.log(data);
@@ -74,5 +78,11 @@ export class AddCandidateComponent {
 
     });
 
+  }
+
+
+
+  fileUpload(event:any){
+    
   }
 }
