@@ -1,0 +1,95 @@
+<div class="container">
+    <br/>
+    <h4>Please fill in Employee Information below</h4>
+
+    <form [formGroup]="addEmployeeFormGroup">
+        <div class="row">
+            <div class="my-2">
+                <span>First Name</span>
+                <input type="text" name="firstName" formControlName="firstName" class="form-control">
+                <span class="text-danger" *ngIf="firstName && firstName.invalid && firstName.touched">This is invalid First Name</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Last Name</span>
+                <input type="text" name="lastName" formControlName="lastName" class="form-control">
+                <span class="text-danger" *ngIf="lastName && lastName.invalid && lastName.touched">This is invalid Last Name</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Middle Name</span>
+                <input type="text" name="middleName" formControlName="middleName" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>SSN</span>
+                <input type="text" name="ssn" formControlName="ssn" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Hire Date</span>
+                <input type="date" name="hireDate" formControlName="hireDate" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>End Date</span>
+                <input type="date" name="endDate" formControlName="endDate" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Employee Category Id</span>
+                <input type="text" name="employeeCategoryId" formControlName="employeeCategoryId" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Employee Status Id</span>
+                <input type="text" name="employeeStatusId" formControlName="employeeStatusId" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Address</span>
+                <input type="text" name="address" formControlName="address" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Email Address</span>
+                <input type="text" name="emailAddress" formControlName="emailAddress" class="form-control">
+                <span class="text-danger" *ngIf="emailAddress && emailAddress.invalid && emailAddress.touched">This is invalid Email Address</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Employee Role Id</span>
+                <input type="text" name="employeeRoleId" formControlName="employeeRoleId" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="my-2">
+                <input [disabled]="!addEmployeeFormGroup.valid" type="button" class="btn btn-info" (click)="saveEmployee()" value="Submit Employee"/> 
+            </div>
+        </div>
+
+
+    </form>
+</div>

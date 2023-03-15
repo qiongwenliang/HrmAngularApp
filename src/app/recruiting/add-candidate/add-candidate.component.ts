@@ -25,7 +25,7 @@ export class AddCandidateComponent {
   addCandidateFormGroup=this.fb.group({
     firstName: new FormControl("", [Validators.required]),
     lastName: new FormControl("", [Validators.required]),
-    emailId: new FormControl("", [Validators.required, Validators.email]),
+    emailId: new FormControl(""),
     mobile: new FormControl(""),
     resumeUrl: new FormControl(""),
     fileName: new FormControl("")

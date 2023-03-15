@@ -10,6 +10,10 @@ export class InterviewsService {
 
   constructor(private http:HttpClient) { }
 
+  saveInterviewsToService(interviews:Interviews){
+    return this.http.post("http://localhost:57877/api/interviews", interviews)
+  }
+
   getAllInterviews(): Observable<Interviews[]>{
     return this.http.get<Interviews[]>("http://localhost:57877/api/interviews")
   }

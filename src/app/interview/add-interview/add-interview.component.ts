@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { Interviews } from 'src/app/interface/Interviews';
+import { InterviewsService } from 'src/app/services/interviews.service';
 
 @Component({
   selector: 'app-add-interview',
@@ -19,7 +20,7 @@ export class AddInterviewComponent {
     interviewFeedbackId: undefined
   }
   
-  constructor(private fb:FormBuilder){ }
+  constructor(private fb:FormBuilder, private interviewsService:InterviewsService){ }
 
   addInterviewsFormGroup = this.fb.group({
     recruiterId : new FormControl(),
@@ -68,5 +69,11 @@ export class AddInterviewComponent {
     this.interviews.interviewerId = this.addInterviewsFormGroup.value.interviewerId
     this.interviews.scheduledOn = this.addInterviewsFormGroup.value.scheduledOn
     this.interviews.interviewFeedbackId = this.addInterviewsFormGroup.value.interviewFeedbackId
+
+    this.interviewsService.saveInterviewsToService(this.interviews).subscribe((data) => {
+      alert("Interview is saved")
+      this.addInterviewsFormGroup.reset()
+    })
   }
+
 }

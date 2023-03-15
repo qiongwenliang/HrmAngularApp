@@ -8,7 +8,8 @@ const routes: Routes = [
   {path:'', component:MasterlayoutComponent, //make it load masterlayout component by default
     children: [
       {path:'recruiting', loadChildren:()=> import('./recruiting/recruiting.module').then(x => x.RecruitingModule)},
-      {path:'interview', loadChildren:() => import('./interview/interview.module').then(x => x.InterviewModule)}
+      {path:'interview', loadChildren:() => import('./interview/interview.module').then(x => x.InterviewModule)},
+      {path:'onboard', loadChildren:() => import('./onboard/onboard.module').then(x => x.OnboardModule)}
     ]  
   },
   {path:'login', component:LoginComponent},
