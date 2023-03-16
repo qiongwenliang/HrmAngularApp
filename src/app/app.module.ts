@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OnboardModule } from './onboard/onboard.module';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { OnboardModule } from './onboard/onboard.module';
     RecruitingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    OnboardModule
+    OnboardModule,
+    AuthenticationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

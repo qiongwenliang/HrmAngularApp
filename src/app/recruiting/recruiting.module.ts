@@ -18,7 +18,7 @@ import { CandidateService } from '../services/candidate.service';
     RecruitingRoutingModule,
     ReactiveFormsModule
   ],
-  providers:[CandidateService]// if add CandidateService here in the brackets, it's the same as addsingleton in the module, 
+  providers:[CandidateService]// if inject CandidateService here in the brackets, it's the same as addsingleton in the module, 
               // if do not want this service works within the whole module, then go to the specific component
 })
 export class RecruitingModule { }

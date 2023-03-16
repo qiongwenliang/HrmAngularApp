@@ -11,14 +11,14 @@ export class InterviewsService {
   constructor(private http:HttpClient) { }
 
   saveInterviewsToService(interviews:Interviews){
-    return this.http.post("http://localhost:57877/api/interviews", interviews)
+    return this.http.post("http://localhost:7291/api/interviews", interviews)
   }
 
   getAllInterviews(): Observable<Interviews[]>{
-    return this.http.get<Interviews[]>("http://localhost:57877/api/interviews")
+    return this.http.get<Interviews[]>("http://localhost:7291/api/interviews")
   }
 
   deleteInterviewsById(id:any){
-    return this.http.delete<Interviews[]>("http://localhost:57877/api/interviews"+id)
+    return this.http.delete<Interviews[]>("http://localhost:7291/api/interviews"+id)
   }
 }

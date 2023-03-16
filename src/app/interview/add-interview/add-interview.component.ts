@@ -66,11 +66,11 @@ export class AddInterviewComponent {
     this.interviews.submissionId = this.addInterviewsFormGroup.value.submissionId
     this.interviews.interviewTypeId = this.addInterviewsFormGroup.value.interviewTypeId
     this.interviews.interviewRound = this.addInterviewsFormGroup.value.interviewRound
-    this.interviews.interviewerId = this.addInterviewsFormGroup.value.interviewerId
     this.interviews.scheduledOn = this.addInterviewsFormGroup.value.scheduledOn
+    this.interviews.interviewerId = this.addInterviewsFormGroup.value.interviewerId
     this.interviews.interviewFeedbackId = this.addInterviewsFormGroup.value.interviewFeedbackId
 
-    this.interviewsService.saveInterviewsToService(this.interviews).subscribe((data) => {
+    this.interviewsService.saveInterviewsToService(this.interviews).subscribe(() => {
       alert("Interview is saved")
       this.addInterviewsFormGroup.reset()
     })

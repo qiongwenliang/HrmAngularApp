@@ -89,13 +89,13 @@ export class AddEmployeeComponent {
     this.employee.firstName=this.addEmployeeFormGroup.value.firstName
     this.employee.lastName=this.addEmployeeFormGroup.value.lastName
     this.employee.middleName=this.addEmployeeFormGroup.value.middleName
-    this.employee.address=this.addEmployeeFormGroup.value.address
-    this.employee.emailAddress=this.addEmployeeFormGroup.value.emailAddress
     this.employee.ssn=this.addEmployeeFormGroup.value.ssn
     this.employee.hireDate=this.addEmployeeFormGroup.value.hireDate
     this.employee.endDate=this.addEmployeeFormGroup.value.endDate
     this.employee.employeeCategoryId=this.addEmployeeFormGroup.value.employeeCategoryId
     this.employee.employeeStatusId=this.addEmployeeFormGroup.value.employeeStatusId
+    this.employee.address=this.addEmployeeFormGroup.value.address
+    this.employee.emailAddress=this.addEmployeeFormGroup.value.emailAddress        
     this.employee.employeeRoleId=this.addEmployeeFormGroup.value.employeeRoleId
 
     this.employeeService.saveEmployeeToService(this.employee).subscribe(()=>{

@@ -11,15 +11,15 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   saveUserToService(user:User){
-    return this.http.post("http://localhost:57879/api/user", user);
+    return this.http.post("http://localhost:7294/api/user", user);
   }
 
   getAllUser() : Observable<User[]>{
-    return this.http.get<User[]>("http://localhost:57879/api/user")
+    return this.http.get<User[]>("http://localhost:7294/api/user")
   }
 
   deleteUserById(id:any){
-    return this.http.delete("http://localhost:57879/api/user" + id)
+    return this.http.delete("http://localhost:7294/api/user" + id)
   }
 
 }
