@@ -9,7 +9,8 @@ const routes: Routes = [
     children: [
       {path:'recruiting', loadChildren:()=> import('./recruiting/recruiting.module').then(x => x.RecruitingModule)},
       {path:'interview', loadChildren:() => import('./interview/interview.module').then(x => x.InterviewModule)},
-      {path:'onboard', loadChildren:() => import('./onboard/onboard.module').then(x => x.OnboardModule)}
+      {path:'onboard', loadChildren:() => import('./onboard/onboard.module').then(x => x.OnboardModule)},
+      {path:'authentication', loadChildren:() => import('./authentication/authentication.module').then(x => x.AuthenticationModule)}
     ]  
   },
   {path:'login', component:LoginComponent},

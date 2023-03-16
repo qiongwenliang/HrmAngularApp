@@ -1,0 +1,66 @@
+<div class="container">
+    <form [formGroup]="addUserFormGroup">
+        <div class="row">
+            <div class="my-2">
+                <span>Employee Id</span>
+                <input type="text" name="employeeId" formControlName="employeeId" class="form-control"/>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="my-2">
+                <span>Email Id</span>
+                <input type="text" name="emailId" formControlName="emailId" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="my-2">
+                <span>Role Id</span>
+                <input type="text" name="roleId" formControlName="roleId" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="my-2">
+                <span>First Name</span>
+                <input type="text" name="firstName" formControlName="firstName" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="my-2">
+                <span>Last Name</span>
+                <input type="text" name="lastName" formControlName="lastName" class="form-control">
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="my-2">
+                <span>HashPassword</span>
+                <input type="password" name="hashPassword" formControlName="hashPassword" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="my-2">
+                <span>Salt</span>
+                <input type="text" name="salt" formControlName="salt" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="my-2">
+                <input type="button" value="Submit User" class="btn btn-info" (click)="saveUser()">
+            </div>
+        </div>
+
+    </form>
+</div>
