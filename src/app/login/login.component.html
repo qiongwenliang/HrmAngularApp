@@ -1,1 +1,30 @@
-<p>login works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Login Page</a>
+</nav>
+
+<br/>
+
+<div class="container">
+    <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+        <div class="row">
+            <div class="my-2">
+                <span>Username</span>
+                <input type="text" [(ngModel)]="login.username" required="required" name="username" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <span>Password</span>
+                <input type="password" [(ngModel)]="login.password" required name="password" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2">
+                <input type="submit" value="Login" [disabled]="!loginForm.valid" class="btn"/> 
+            </div>
+        </div>
+        
+    </form>
+</div>

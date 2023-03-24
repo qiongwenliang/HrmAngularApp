@@ -25,3 +25,12 @@ services : ->
 Service will be created in a seperate folder, and in that folder, run:
  - ng g s <service-name>
  - ng g s Candidate
+
+
+
+ Interceptor:
+ - it's a service, and it must be registered, in app.module.ts, interceptors are a bit different,
+    to register it, it must be done with creating an object in providers.
+ ng g interceptor <name-interceptor>
+ this will generate interceptor.ts that is already complied.
+ 

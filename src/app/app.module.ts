@@ -10,10 +10,12 @@ import { InterviewModule } from './interview/interview.module';
 import { RecruitingModule } from './recruiting/recruiting.module';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OnboardModule } from './onboard/onboard.module';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { HeadersInterceptor } from './interceptors/headers.interceptor';
+import { AuthGuard } from './Guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,15 @@ import { AuthenticationModule } from './authentication/authentication.module';
     ReactiveFormsModule,
     HttpClientModule,
     OnboardModule,
-    AuthenticationModule
+    AuthenticationModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    //inject interceptor service, by creating an object
+    {provide:HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi:true},
+    //guards are services
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

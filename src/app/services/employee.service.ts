@@ -11,14 +11,14 @@ export class EmployeeService {
   constructor(private http:HttpClient) { }
 
   saveEmployeeToService(employee:Employee){
-    return this.http.post("http://localhost:7293/api/employee", employee);
+    return this.http.post("http://localhost:7292/api/employee", employee);
   }
 
   getAllEmployee():Observable<Employee[]>{
-    return this.http.get<Employee[]>("http://localhost:7293/api/employee")
+    return this.http.get<Employee[]>("http://localhost:7292/api/employee")
   }
 
   deleteEmployeeById(id:any){
-    return this.http.delete("http://localhost:7293/api/employee"+id)
+    return this.http.delete("http://localhost:7292/api/employee"+id)
   }
 }

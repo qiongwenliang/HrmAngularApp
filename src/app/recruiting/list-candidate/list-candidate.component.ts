@@ -16,6 +16,8 @@ export class ListCandidateComponent implements OnInit {
   ngOnInit(): void {
     this.candidateService.getAllCandidates().subscribe((data)=> {
       this.candidateCollections=data;
+    }, (error)=>{
+      console.log(error)
     })
   }
 
